@@ -2,16 +2,19 @@
 ### Cloning the project
 To clone the project first make sure **git** is installed on your system, then, run the following command:
 ```bash
-git clone https://github.com/bngno/streamlit_csv_converter.git # Clones the remote repository, locally
+git clone https://github.com/bngno/streamlit_csv_converter.git
 ```
+### Prepping evironment
+#### Starting virtual enviroment (run once)
+In the project's directory prepare the environment to run the application with:
+```bash
+make venv
+source .venv/bin/activate
+make install
+``` 
 ### Running the project
-#### Navigating to the project's folder:
-After sucessfully cloning the repository, change your active directory the project's directory using:
-```bash
-cd streamlit_csv_converter # cd stands for "change directory"
-```
 #### Starting the application
-Run the following command to start the application:
+Start the application with:
 ```bash
-streamlit run main.py
+make app
 ```

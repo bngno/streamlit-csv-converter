@@ -1,3 +1,7 @@
+# initialize project
+init:
+	uv init
+
 # updates packages
 install:
 	uv sync

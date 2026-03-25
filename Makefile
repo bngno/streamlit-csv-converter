@@ -1,20 +1,7 @@
-# base configurations
-VENV := .venv
-
-# commads
-# creares the virtual environment (venv)
-venv:
-	python -m venv $(VENV)
-
-# updating pip and installing and updating dependencies
+# updates packages
 install:
-	pip install --upgrade pip;
-	pip install -r requirements.txt;
+	uv sync
 
-# starting the application
-app: install
-	streamlit run main.py
-
-# cleaning the set environment
-clean:
-	rm -rf $(VENV)
+# starts the application
+app:
+	uv run streamlit run main.py
